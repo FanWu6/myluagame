@@ -1,0 +1,210 @@
+--消息派发定义文件：auto create by roy.z at 2014-09-04
+
+
+
+--	--**************************************模块：登陆	模块编号:10	说明:登陆服务器验证等
+--function CGGC_HANDLER(_cmdid)
+--	 if _cmdid == PACKET_CG_Connect then 
+--		CHECK_Handle(_cmdid)
+--	end
+--	
+----
+----	 if _cmdid = PACKET_GC_Connect then 
+----		GC_Connect _packet 
+----		_packet.Unpack(_Body) 
+----		GC_ConnectHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_CG_LoginGame then 
+----		CG_LoginGame _packet 
+----		_packet.Unpack(_Body) 
+----		CG_LoginGameHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_GC_RetLoginGame then 
+----		GC_RetLoginGame _packet 
+----		_packet.Unpack(_Body) 
+----		GC_RetLoginGameHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_CG_HeartBeat then 
+----		CG_HeartBeat _packet 
+----		_packet.Unpack(_Body) 
+----		CG_HeartBeatHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_GC_HeartBeat then 
+----		GC_HeartBeat _packet 
+----		_packet.Unpack(_Body) 
+----		GC_HeartBeatHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_CG_ModifyNickName then 
+----		CG_ModifyNickName _packet 
+----		_packet.Unpack(_Body) 
+----		CG_ModifyNickNameHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_GC_ModifyNickName then 
+----		GC_ModifyNickName _packet 
+----		_packet.Unpack(_Body) 
+----		GC_ModifyNickNameHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	--**************************************模块：聊天	模块编号:11	说明:
+----
+----	 if _cmdid = PACKET_CG_Chat then 
+----		CG_Chat _packet 
+----		_packet.Unpack(_Body) 
+----		CG_ChatHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_GC_Chat then 
+----		GC_Chat _packet 
+----		_packet.Unpack(_Body) 
+----		GC_ChatHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	--**************************************模块：英雄	模块编号:12	说明:
+----
+----	 if _cmdid = PACKET_CG_CallHero then 
+----		CG_CallHero _packet 
+----		_packet.Unpack(_Body) 
+----		CG_CallHeroHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_GC_CallHero then 
+----		GC_CallHero _packet 
+----		_packet.Unpack(_Body) 
+----		GC_CallHeroHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_CG_HeroList then 
+----		CG_HeroList _packet 
+----		_packet.Unpack(_Body) 
+----		CG_HeroListHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_GC_HeroList then 
+----		GC_HeroList _packet 
+----		_packet.Unpack(_Body) 
+----		GC_HeroListHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	--**************************************模块：物品	模块编号:13	说明:物品，背包，装备等
+----
+----	 if _cmdid = PACKET_CG_AddItem then 
+----		CG_AddItem _packet 
+----		_packet.Unpack(_Body) 
+----		CG_AddItemHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_GC_AddItem then 
+----		GC_AddItem _packet 
+----		_packet.Unpack(_Body) 
+----		GC_AddItemHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_CG_ShopBuyItem then 
+----		CG_ShopBuyItem _packet 
+----		_packet.Unpack(_Body) 
+----		CG_ShopBuyItemHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_GC_ShopBuyItem then 
+----		GC_ShopBuyItem _packet 
+----		_packet.Unpack(_Body) 
+----		GC_ShopBuyItemHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_CG_PackBag then 
+----		CG_PackBag _packet 
+----		_packet.Unpack(_Body) 
+----		CG_PackBagHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_GC_PackBag then 
+----		GC_PackBag _packet 
+----		_packet.Unpack(_Body) 
+----		GC_PackBagHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_CG_DragItem then 
+----		CG_DragItem _packet 
+----		_packet.Unpack(_Body) 
+----		CG_DragItemHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_GC_DragItem then 
+----		GC_DragItem _packet 
+----		_packet.Unpack(_Body) 
+----		GC_DragItemHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_CG_DeleteItem then 
+----		CG_DeleteItem _packet 
+----		_packet.Unpack(_Body) 
+----		CG_DeleteItemHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_GC_DeleteItem then 
+----		GC_DeleteItem _packet 
+----		_packet.Unpack(_Body) 
+----		GC_DeleteItemHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_CG_ExtendBag then 
+----		CG_ExtendBag _packet 
+----		_packet.Unpack(_Body) 
+----		CG_ExtendBagHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_GC_ExtendBag then 
+----		GC_ExtendBag _packet 
+----		_packet.Unpack(_Body) 
+----		GC_ExtendBagHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_CG_BagList then 
+----		CG_BagList _packet 
+----		_packet.Unpack(_Body) 
+----		CG_BagListHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+----
+----	 if _cmdid = PACKET_GC_BagList then 
+----		GC_BagList _packet 
+----		_packet.Unpack(_Body) 
+----		GC_BagListHandler _pachetHandler
+----		_pachetHandler.ExecPacket()
+----	end
+--
+--end
+
+
+

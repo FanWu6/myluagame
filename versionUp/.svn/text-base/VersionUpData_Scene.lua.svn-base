@@ -1,0 +1,54 @@
+
+
+
+local function On_Close(sender,eventType)
+
+if eventType == ccui.TouchEventType.began then
+
+    elseif eventType == ccui.TouchEventType.moved then
+        
+    elseif eventType == ccui.TouchEventType.ended then
+
+        local Father = sender:getParent():getParent()
+    	Father:removeFromParent()
+
+    elseif eventType == ccui.TouchEventType.canceled then
+    
+    end
+end
+
+
+
+
+function CreatVersionUpData_Scene( Scene )
+	
+
+	
+	local ui_widget = ccs.GUIReader:getInstance():widgetFromJsonFile("res/versionUp/VersionUpDataScene_1.json")
+
+	Scene:addChild(ui_widget,100) 
+
+
+	local VersionUpDataBG = ui_widget:getChildByName("VersionUpDataBG")
+
+	local VersionUpData_Title = VersionUpDataBG:getChildByName("VersionUpData_Title")
+
+	local VersionUpData_Info_BG = VersionUpDataBG:getChildByName("VersionUpData_Info_BG")
+
+	local VersionUpData_Info = VersionUpData_Info_BG:getChildByName("VersionUpData_Info")
+
+	VersionUpData_Info:setTextAreaSize(cc.size(685, 0))
+
+	VersionUpData_Info:setString("版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告版本更新公告end")
+
+	print(VersionUpData_Info:getVirtualRendererSize().height)
+	VersionUpData_Info:setSize(cc.size(685, VersionUpData_Info:getVirtualRendererSize().height))
+
+	VersionUpData_Info_BG:setInnerContainerSize(cc.size(700,VersionUpData_Info:getVirtualRendererSize().height))
+
+	VersionUpData_Info:setPositionY(VersionUpData_Info:getPositionY()+VersionUpData_Info:getVirtualRendererSize().height-350)
+
+	local OK_Btn = VersionUpDataBG:getChildByName("OK_Btn")
+
+	OK_Btn:addTouchEventListener(On_Close)
+end
